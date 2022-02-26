@@ -15,4 +15,4 @@ This document uses the terminology established in [QUIC-TRANSPORT].
 
 For brevity, the acronym TLS is used to refer to TLS 1.3, though a newer version could be used; see Section 4.2.
 
-为了简洁，缩写TLS指代的是TLS 1.3，但也可以使用更新的版本；详见[第4.2章]()。
+为了简洁，缩写TLS指代的是TLS 1.3，但也可以使用更高的版本；详见[第4.2章]()。

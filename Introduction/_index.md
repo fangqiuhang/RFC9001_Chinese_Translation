@@ -7,7 +7,7 @@ rank: "h1"
 
 This document describes how QUIC [QUIC-TRANSPORT] is secured using TLS [TLS13].
 
-本文档描述了如何使用TLS（详见《[TLS13]()》）来加固QUIC（详见《[QUIC传输]()》）的安全性。
+本文档描述了如何使用TLS（详见《[TLS13]()》）来加固QUIC（详见《[QUIC传输]()》）的安全。
 
 TLS 1.3 provides critical latency improvements for connection establishment over previous versions. Absent packet loss, most new connections can be established and secured within a single round trip; on subsequent connections between the same client and server, the client can often send application data immediately, that is, using a zero round-trip setup.
 

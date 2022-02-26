@@ -44,7 +44,7 @@ Figure 4 shows these interactions in more detail, with the QUIC packet protectio
 > TODO：图4
 
 {{< block_img
-indx="Figure_4_QUIC and TLS Interactions"
+indx="Figure_4_QUIC_and_TLS_Interactions"
 title="图4：QUIC和TLS的交互"
 type="svg"
 src="/RFC9000_Chinese_Translation/images/Figure_2_States_for_Sending_Parts_of_Streams.svg" >}}
