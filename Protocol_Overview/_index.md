@@ -7,7 +7,7 @@ rank: "h1"
 
 QUIC [QUIC-TRANSPORT] assumes responsibility for the confidentiality and integrity protection of packets. For this it uses keys derived from a TLS handshake [TLS13], but instead of carrying TLS records over QUIC (as with TCP), TLS handshake and alert messages are carried directly over the QUIC transport, which takes over the responsibilities of the TLS record layer, as shown in Figure 3.
 
-QUIC（详见《[QUIC传输]()》）负责数据包的可信度和完整性保护。为此它使用了衍生自TLS握手（详见《[TLS13]()》）的密钥，但如[图3]()所示，TLS握手和警告消息由QUIC传输层直接携带，而不是在QUIC传输层的基础上使用TLS记录来携带（TCP是这么做的），也就是说QUIC接管了TLS记录层的职责。
+QUIC（详见《[QUIC传输]()》）负责数据包的可信度和完整性保护。为此它使用了衍生自TLS握手（详见《[TLS13]()》）的密钥，但如[图3]()所示，TLS握手和警告消息由QUIC传输层直接传递，而不是在QUIC传输层的基础上使用TLS记录来传递（TCP是这么做的），也就是说QUIC接管了TLS记录层的职责。
 
 > TODO：图3
 
@@ -51,4 +51,4 @@ src="/RFC9000_Chinese_Translation/images/Figure_2_States_for_Sending_Parts_of_St
 
 Unlike TLS over TCP, QUIC applications that want to send data do not send it using TLS Application Data records. Rather, they send it as QUIC STREAM frames or other frame types, which are then carried in QUIC packets.
 
-不像基于TCP的TLS，想要发送数据的QUIC应用并不使用TLS应用数据记录来发送，而是将数据以QUIC**流帧**或其他类型的帧的形式发送，它们都是由QUIC数据包携带的。
+不像基于TCP的TLS，想要发送数据的QUIC应用并不使用TLS应用数据记录来发送，而是将数据以QUIC**流帧**或其他类型的帧的形式发送，它们都是由QUIC数据包传递的。
