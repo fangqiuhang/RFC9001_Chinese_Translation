@@ -7,7 +7,7 @@ rank: "h2"
 
 Parts of QUIC packet headers, in particular the Packet Number field, are protected using a key that is derived separately from the packet protection key and IV. The key derived using the "quic hp" label is used to provide confidentiality protection for those fields that are not exposed to on-path elements.
 
-QUIC数据包头部的一部分，尤其是数据包号字段，会受到独立衍生自数据包保护密钥和IV的密钥的保护。使用值为`quic hp`的`label`字段衍生的密钥被用于对那些没有暴露给路径上设备的字段提供可信度保护。
+QUIC数据包头部的一部分，尤其是数据包号字段，会受到独立衍生自数据包保护密钥和IV的密钥的保护。使用值为`quic hp`的标签衍生的密钥被用于对那些没有暴露给路径上设备的字段提供可信度保护。
 
 This protection applies to the least significant bits of the first byte, plus the Packet Number field. The four least significant bits of the first byte are protected for packets with long headers; the five least significant bits of the first byte are protected for packets with short headers. For both header forms, this covers the reserved bits and the Packet Number Length field; the Key Phase bit is also protected for packets with a short header.
 
