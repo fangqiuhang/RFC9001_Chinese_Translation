@@ -29,6 +29,8 @@ Figure 9 shows a key update process, where the initial set of keys used (identif
 
 [图9]()展示了密钥更新的过程，其中初始时使用的那组密钥（标记为`@M`）被更新后的密钥（标记为`@N`）代替了。密钥阶段比特位的值用中括号`[]`来表示。
 
+> TODO：图9
+
 {{< block_img
 indx="Figure_9_Key_Update"
 title="图9：密钥更新"
