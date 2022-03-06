@@ -19,4 +19,4 @@ An endpoint cannot discard keys for a given encryption level unless it has recei
 
 Though an endpoint might retain older keys, new data MUST be sent at the highest currently available encryption level. Only ACK frames and retransmissions of data in CRYPTO frames are sent at a previous encryption level. These packets MAY also include PADDING frames.
 
-尽管终端可能持续保留旧的密钥，但是新数据{{< req_level MUST >}}使用当前可用的最高密级来发送。只有**ACK帧**和重传数据的**加密帧**会使用先前的密级来发送。这些数据包中还{{< req_level MAY >}}包含**填充帧**。
+尽管终端可以持续保留旧的密钥，但是新数据{{< req_level MUST >}}使用当前可用的最高密级来发送。只有**ACK帧**和重传数据的**加密帧**会使用先前的密级来发送。这些数据包中还{{< req_level MAY >}}包含**填充帧**。

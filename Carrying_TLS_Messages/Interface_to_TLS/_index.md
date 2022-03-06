@@ -15,7 +15,7 @@ As shown in Figure 4, the interface from QUIC to TLS consists of four primary fu
 
 * Processing stored transport and application state from a resumed session and determining if it is valid to generate or accept 0-RTT data
 
-* 处理已存储的用于恢复会话的传输状态和应用状态，并判断它们是否有效从而生成或接受0-RTT数据
+* 处理已存储的用于恢复会话的传输状态和应用状态，并判断它们是否有效以生成或接受0-RTT数据
 
 * Rekeying (both transmit and receive)
 

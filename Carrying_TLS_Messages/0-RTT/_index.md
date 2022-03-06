@@ -7,7 +7,7 @@ rank: "h2"
 
 The 0-RTT feature in QUIC allows a client to send application data before the handshake is complete. This is made possible by reusing negotiated parameters from a previous connection. To enable this, 0-RTT depends on the client remembering critical parameters and providing the server with a TLS session ticket that allows the server to recover the same information.
 
-QUIC中的0-RTT特性使得客户端可以在握手完成前就发送应用数据。这是通过重用在先前的连接中协商的参数来做到的。要启用0-RTT，要求客户端记录一些关键参数，并向服务器提供一个TLS的会话票据，这个票据使得服务器能够恢复出一份与客户端那里的相同的信息。
+QUIC中的0-RTT特性使得客户端能够在握手完成前就发送应用数据。这是通过重用在先前的连接中协商的参数的方式来做到的。0-RTT的启用要求客户端记录一些关键参数，并向服务器提供一个TLS的会话票据，这个票据使得服务器能够恢复出一份与客户端所持有的信息保持一致的信息。
 
 This information includes parameters that determine TLS state, as governed by [TLS13], QUIC transport parameters, the chosen application protocol, and any information the application protocol might need; see Section 4.6.3. This information determines how 0-RTT packets and their contents are formed.
 
