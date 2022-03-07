@@ -23,7 +23,7 @@ Initiating a key update results in both endpoints updating keys. This differs fr
 
 This mechanism replaces the key update mechanism of TLS, which relies on KeyUpdate messages sent using 1-RTT encryption keys. Endpoints MUST NOT send a TLS KeyUpdate message. Endpoints MUST treat the receipt of a TLS KeyUpdate message as a connection error of type 0x010a, equivalent to a fatal TLS alert of unexpected_message; see Section 4.8.
 
-这项机制代替了TLS的密钥更新机制，后者依赖于受到1-RTT加密密钥保护的密钥更新消息。终端{{< req_level MUST_NOT >}}发送TLS的密钥更新消息。终端{{< req_level MUST >}}将受到TLS的密钥更新消息的情况视作类型为`0x010a`的连接错误，它等价于TLS中致命级别的`unexpected_message`（意外的消息）警报；详见[第4.8章]()。
+这项机制代替了TLS的密钥更新机制，后者依赖于受到1-RTT加密密钥保护的`KeyUpdate`（密钥更新）消息。终端{{< req_level MUST_NOT >}}发送TLS的密钥更新消息。终端{{< req_level MUST >}}将受到TLS的密钥更新消息的情况视作类型为`0x010a`的连接错误，它等价于TLS中致命级别的`unexpected_message`（意外的消息）警报；详见[第4.8章]()。
 
 Figure 9 shows a key update process, where the initial set of keys used (identified with @M) are replaced by updated keys (identified with @N). The value of the Key Phase bit is indicated in brackets [].
 
