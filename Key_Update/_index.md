@@ -11,7 +11,7 @@ Once the handshake is confirmed (see Section 4.1.2), an endpoint MAY initiate a 
 
 The Key Phase bit indicates which packet protection keys are used to protect the packet. The Key Phase bit is initially set to 0 for the first set of 1-RTT packets and toggled to signal each subsequent key update.
 
-密钥阶段比特位表明了用于保护数据包的数据包保护密钥。密钥阶段比特位在第一组1-RTT数据包上被初始化为状态`0`，并在后续每次密钥更新时切换状态。
+使用密钥阶段比特位可以区分用于保护数据包的数据包保护密钥。密钥阶段比特位在第一组1-RTT数据包上被初始化为状态`0`，并在后续每次密钥更新时切换状态。
 
 The Key Phase bit allows a recipient to detect a change in keying material without needing to receive the first packet that triggered the change. An endpoint that notices a changed Key Phase bit updates keys and decrypts the packet that contains the changed value.
 
@@ -23,7 +23,7 @@ Initiating a key update results in both endpoints updating keys. This differs fr
 
 This mechanism replaces the key update mechanism of TLS, which relies on KeyUpdate messages sent using 1-RTT encryption keys. Endpoints MUST NOT send a TLS KeyUpdate message. Endpoints MUST treat the receipt of a TLS KeyUpdate message as a connection error of type 0x010a, equivalent to a fatal TLS alert of unexpected_message; see Section 4.8.
 
-这项机制代替了TLS的密钥更新机制，后者依赖于受到1-RTT加密密钥保护的`KeyUpdate`（密钥更新）消息。终端{{< req_level MUST_NOT >}}发送TLS的密钥更新消息。终端{{< req_level MUST >}}将受到TLS的密钥更新消息的情况视作类型为`0x010a`的连接错误，它等价于TLS中致命级别的`unexpected_message`（意外的消息）警报；详见[第4.8章]()。
+这项机制代替了TLS的密钥更新机制，后者依赖于受到1-RTT加密密钥保护的`KeyUpdate`（密钥更新）消息。终端{{< req_level MUST_NOT >}}发送TLS的`KeyUpdate`消息。终端{{< req_level MUST >}}将受到TLS的`KeyUpdate`消息的情况视作类型为`0x010a`的连接错误，它等价于TLS中致命级别的`unexpected_message`（意外的消息）警报；详见[第4.8章]()。
 
 Figure 9 shows a key update process, where the initial set of keys used (identified with @M) are replaced by updated keys (identified with @N). The value of the Key Phase bit is indicated in brackets [].
 
