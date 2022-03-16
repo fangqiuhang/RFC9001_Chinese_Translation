@@ -19,7 +19,7 @@ Table 2: TLS ExtensionType Values Registry Entry
 
 {{% block_ref
 indx="Table_2_TLS_ExtensionType_Values_Registry_Entry"
-title="表2：TLS扩展类型值注册表项" %}}
+title="表2：TLS扩展类型值注册项" %}}
 
 | 值   | 扩展名称                      | TLS 1.3 | 受推荐 | 参考文献 |
 |:----|:--------------------------|:--------|:----|:-----|
