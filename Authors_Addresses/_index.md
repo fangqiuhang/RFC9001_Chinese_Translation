@@ -16,3 +16,11 @@ Email: [mt@lowentropy.net](mainto:mt@lowentropy.net)
 sn3rd
 
 Email: [sean@sn3rd.com](mailto:sean@sn3rd.com)
+
+## 译
+
+- [Yunzhe](https://github.com/YunzheZJU)
+    - Email: yunzhe@zju.edu.cn
+
+- [方秋航](https://github.com/fangqiuhang)
+  - Email: fangqiuhang@163.com
