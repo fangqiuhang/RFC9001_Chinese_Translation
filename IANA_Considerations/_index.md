@@ -5,17 +5,9 @@ weight: 1000
 rank: "h1"
 ---
 
-IANA has registered a codepoint of 57 (or 0x39) for the quic_transport_parameters extension (defined in Section 8.2) in the "TLS ExtensionType Values" registry [TLS-REGISTRIES].
-
 IANA已经在“TLS扩展类型值”注册表（详见《[TLS-REGISTRIES]()》）中为`quic_transport_parameters`（QUIC传输参数）扩展（有关定义详见[第8.2章]()）注册了值为`57`（也就是`0x39`）的码点。
 
-The Recommended column for this extension is marked Yes. The TLS 1.3 Column includes CH (ClientHello) and EE (EncryptedExtensions).
-
 该扩展的受推荐一栏被标记为“是”。TLS 1.3一栏中包含CH（`ClientHello`，客户端问候）和EE（`EncryptedExtensions`，加密扩展）。
-
-Value	Extension Name	TLS 1.3	Recommended	Reference
-57	quic_transport_parameters	CH, EE	Y	This document
-Table 2: TLS ExtensionType Values Registry Entry
 
 {{% block_ref
 indx="Table_2_TLS_ExtensionType_Values_Registry_Entry"

@@ -5,8 +5,6 @@ weight: 1210
 rank: "h2"
 ---
 
-The labels generated during the execution of the HKDF-Expand-Label function (that is, HkdfLabel.label) and part of the value given to the HKDF-Expand function in order to produce its output are:
-
 在`HKDF-Expand-Label`函数的执行期间生成的标签（也就是`HkdfLabel.label`），以及传给`HKDF-Expand`函数的参数为：
 
 `client in`: `00200f746c73313320636c69656e7420696e00`
@@ -18,8 +16,6 @@ The labels generated during the execution of the HKDF-Expand-Label function (tha
 `quic iv`: `000c0d746c733133207175696320697600`
 
 `quic hp`: `00100d746c733133207175696320687000`
-
-The initial secret is common:
 
 初始秘密值是通用的：
 
@@ -33,8 +29,6 @@ initial_secret = HKDF-Extract(initial_salt, cid)
 ```
 
 {{% /block_ref %}}
-
-The secrets for protecting client packets are:
 
 用于保护客户端数据包的秘密值为：
 
@@ -58,8 +52,6 @@ hp  = HKDF-Expand-Label(client_initial_secret, "quic hp", "", 16)
 ```
 
 {{% /block_ref %}}
-
-The secrets for protecting server packets are:
 
 用于保护服务器数据包的秘密值为：
 

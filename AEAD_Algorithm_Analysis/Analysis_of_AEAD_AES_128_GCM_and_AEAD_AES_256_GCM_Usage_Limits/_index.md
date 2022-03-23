@@ -5,18 +5,10 @@ weight: 1310
 rank: "h2"
 ---
 
-[GCM-MU] specifies concrete bounds for AEAD_AES_128_GCM and AEAD_AES_256_GCM as used in TLS 1.3 and QUIC. This section documents this analysis using several simplifying assumptions:
-
 《[GCM-MU]()》具体说明了`AEAD_AES_128_GCM`和`AEAD_AES_256_GCM`被用在TLS 1.3和QUIC中时准确的用量上限。本节使用了一些经简化的假设来概述这份分析：
-
-* The number of ciphertext blocks an attacker uses in forgery attempts is bounded by v * l, which is the number of forgery attempts multiplied by the size of each packet (in blocks).
 
 * 攻击者在尝试伪造时使用的密文块数量上限为`v * l`，即尝试伪造的次数乘以每个数据包（以块为单位）的大小。
 
-* The amount of offline work done by an attacker does not dominate other factors in the analysis.
-
 * 攻击者在线下完成的工作量在本分析的各项因素中并不占据主导地位。
-
-The bounds in [GCM-MU] are tighter and more complete than those used in [AEBounds], which allows for larger limits than those described in [TLS13].
 
 《[GCM-MU]()》中设定的上限比《[AEBounds]()》中使用的那些要更严格且更完备，这使得QUIC实现能够使用比《[TLS13]()》中所描述的更大的限制。

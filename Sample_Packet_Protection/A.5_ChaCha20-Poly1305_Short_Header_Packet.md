@@ -5,11 +5,7 @@ weight: 1250
 rank: "h2"
 ---
 
-This example shows some of the steps required to protect a packet with a short header. This example uses AEAD_CHACHA20_POLY1305.
-
 本例展示了保护短包头数据包时所需的一些步骤。本例使用了`AEAD_CHACHA20_POLY1305`。
-
-In this example, TLS produces an application write secret from which a server uses HKDF-Expand-Label to produce four values: a key, an IV, a header protection key, and the secret that will be used after keys are updated (this last value is not used further in this example).
 
 在本例中，TLS生成了一个应用写入秘密值（`secret`），服务器使用`HKDF-Expand-Label`从这个秘密值生成四个值：一个密钥（`key`）、一个IV（`iv`）、一个头部保护密钥（`hp`），和一个将被在密钥被更新后使用到的秘密值（`ku`，但它在本例中没有被使用到）。
 
@@ -39,8 +35,6 @@ ku  = HKDF-Expand-Label(secret, "quic ku", "", 32)
 
 {{% /block_ref %}}
 
-The following shows the steps involved in protecting a minimal packet with an empty Destination Connection ID. This packet contains a single PING frame (that is, a payload of just 0x01) and has a packet number of 654360564. In this example, using a packet number of length 3 (that is, 49140 is encoded) avoids having to pad the payload of the packet; PADDING frames would be needed if the packet number is encoded on fewer bytes.
-
 下面展示了保护一个目标连接ID为空的最小数据包时所需的一些步骤。这个数据包仅包含了一个**Ping帧**（也就是说，载荷是`0x01`），并且其数据包号为`654360564`。在本例中，使用长度为`3`的数据包号编码方式（也就是编码为`49140`）避免了扩充数据包载荷的需要；如果数据包号被编码至更少的字节中，那么就需要**填充帧**。
 
 {{% block_ref
@@ -56,8 +50,6 @@ payload ciphertext = 655e5cd55c41f69080575d7999c25a5bfb
 
 {{% /block_ref %}}
 
-The resulting ciphertext is the minimum size possible. One byte is skipped to produce the sample for header protection.
-
 其结果密文的长度是在可能的范围中最小的。在为头部保护采样时，会跳过一个字节。
 
 {{% block_ref
@@ -70,8 +62,6 @@ header = 4cfe4189
 ```
 
 {{% /block_ref %}}
-
-The protected packet is the smallest possible packet size of 21 bytes.
 
 经保护的数据包，其21字节的长度是在可能的范围中最小的。
 

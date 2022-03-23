@@ -5,8 +5,6 @@ weight: 1220
 rank: "h2"
 ---
 
-The client sends an Initial packet. The unprotected payload of this packet contains the following CRYPTO frame, plus enough PADDING frames to make a 1162-byte payload:
-
 客户端会发送初始数据包。该数据包未经保护的载荷中包含着**加密帧**，以及足够多的**填充帧**以使得载荷长度达到1162字节：
 
 {{% block_ref
@@ -25,8 +23,6 @@ baf4559fedba753de171fa71f50f1ce1 5d43e994ec74d748002b000302030400
 
 {{% /block_ref %}}
 
-The unprotected header indicates a length of 1182 bytes: the 4-byte packet number, 1162 bytes of frames, and the 16-byte authentication tag. The header includes the connection ID and a packet number of 2:
-
 在未经保护的头部中，长度字段的值表示着后方数据的总长度，即1182字节：4字节长的数据包号，1162字节长的帧，还有16字节长的认证标签。头部中还包含了连接ID和值为`2`的数据包号：
 
 {{% block_ref
@@ -37,8 +33,6 @@ c300000001088394c8f03e5157080000449e00000002
 ```
 
 {{% /block_ref %}}
-
-Protecting the payload produces output that is sampled for header protection. Because the header uses a 4-byte packet number encoding, the first 16 bytes of the protected payload is sampled and then applied to the header as follows:
 
 对载荷进行保护后，其输出密文会被头部保护采样。因为头部中的数据包号被编码为四字节，所以受保护载荷的前16个字节被作为样本（`sample`），应用在头部保护中：
 
@@ -59,8 +53,6 @@ header = c000000001088394c8f03e5157080000449e7b9aec34
 ```
 
 {{% /block_ref %}}
-
-The resulting protected packet is:
 
 最后，经保护的数据包的内容为：
 

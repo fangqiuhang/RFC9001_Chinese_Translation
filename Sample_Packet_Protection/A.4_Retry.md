@@ -5,8 +5,6 @@ weight: 1240
 rank: "h2"
 ---
 
-This shows a Retry packet that might be sent in response to the Initial packet in Appendix A.2. The integrity check includes the client-chosen connection ID value of 0x8394c8f03e515708, but that value is not included in the final Retry packet:
-
 这里展示了一个可以被用于响应[附录A.2]()中的初始数据包的重试数据包。完整性检查中使用了了由客户端选择的值为`0x8394c8f03e515708`的连接ID，但是这个值不会被包含在最终的重试数据包的明文中：
 
 {{% block_ref

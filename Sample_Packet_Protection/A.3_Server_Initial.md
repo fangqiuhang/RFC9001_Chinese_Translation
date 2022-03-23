@@ -5,8 +5,6 @@ weight: 1230
 rank: "h2"
 ---
 
-The server sends the following payload in response, including an ACK frame, a CRYPTO frame, and no PADDING frames:
-
 作为回应，服务器会发送以下载荷，其中包含一个**ACK帧**和一个**加密帧**，并且不包含**填充帧**：
 
 {{% block_ref
@@ -21,8 +19,6 @@ indx="Pseudocode_A_3_1" %}}
 
 {{% /block_ref %}}
 
-The header from the server includes a new connection ID and a 2-byte packet number encoding for a packet number of 1:
-
 来自服务器的头部包含着一个新的连接ID和一个值为`1`且被编码至双字节中数据包号：
 
 {{% block_ref
@@ -33,8 +29,6 @@ c1000000010008f067a5502a4262b50040750001
 ```
 
 {{% /block_ref %}}
-
-As a result, after protection, the header protection sample is taken starting from the third protected byte:
 
 对载荷进行保护后，从第三个密文字节起的一段数据被取作头部保护的样本。
 
@@ -48,8 +42,6 @@ header = cf000000010008f067a5502a4262b5004075c0d9
 ```
 
 {{% /block_ref %}}
-
-The final protected packet is then:
 
 最后，经保护的数据包的内容为：
 
